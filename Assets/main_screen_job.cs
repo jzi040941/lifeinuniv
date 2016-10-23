@@ -34,12 +34,8 @@ public class main_screen_job : MonoBehaviour {
     {
         jobText.text = curJob + "/" + maxJob;
 
-        float curXVal = StatusVal(curJob, 0, maxJob, minXVal, maxXVal);
+        float curXVal = main_screen_health.StatusVal(curJob, 0, maxJob, minXVal, maxXVal);
         jobTrans.position = new Vector3(curXVal, cachedY);
     }
-
-    public static float StatusVal(float x, float inMin, float inMax, float outMin, float outMax)
-    {
-        return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-    }
+    
 }
