@@ -33,13 +33,8 @@ public class main_scree_attr : MonoBehaviour {
     {
         AttrText.text = curAttr + "/" + maxAttr;
 
-        float curXVal = main_screen_job.StatusVal(curAttr, 0, maxAttr, minXVal, maxXVal);
+        float curXVal = main_screen_health.StatusVal(curAttr, 0, maxAttr, minXVal, maxXVal);
         attrTrans.position = new Vector3(curXVal, cachedY);
     }
-    /*
-    private float StatusVal(float x, float inMin, float inMax, float outMin, float outMax)
-    {
-        return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-    }
-    */
+    
 }
