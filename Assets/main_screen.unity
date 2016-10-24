@@ -1456,8 +1456,9 @@ GameObject:
   - 222: {fileID: 691105809}
   - 114: {fileID: 691105808}
   - 114: {fileID: 691105807}
+  - 114: {fileID: 691105810}
   m_Layer: 5
-  m_Name: Date_Pannel
+  m_Name: Date_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1525,6 +1526,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 691105805}
+--- !u!114 &691105810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691105805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbc2ea0afe564a4c8b71b3f429a989f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &780437972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,8 +2575,9 @@ GameObject:
   - 222: {fileID: 1165338204}
   - 114: {fileID: 1165338203}
   - 114: {fileID: 1165338202}
+  - 114: {fileID: 1165338205}
   m_Layer: 5
-  m_Name: Drinking_Pannel
+  m_Name: Drinking_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2632,6 +2645,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1165338200}
+--- !u!114 &1165338205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165338200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbc2ea0afe564a4c8b71b3f429a989f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1177268271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,8 +2667,9 @@ GameObject:
   - 222: {fileID: 1177268275}
   - 114: {fileID: 1177268274}
   - 114: {fileID: 1177268273}
+  - 114: {fileID: 1177268276}
   m_Layer: 5
-  m_Name: Shopping_Pannel
+  m_Name: Shopping_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2712,6 +2737,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1177268271}
+--- !u!114 &1177268276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177268271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbc2ea0afe564a4c8b71b3f429a989f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1253104614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,8 +3486,9 @@ GameObject:
   - 222: {fileID: 1689781681}
   - 114: {fileID: 1689781680}
   - 114: {fileID: 1689781679}
+  - 114: {fileID: 1689781682}
   m_Layer: 5
-  m_Name: Study_Pannel
+  m_Name: Study_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3519,6 +3556,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1689781677}
+--- !u!114 &1689781682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689781677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbc2ea0afe564a4c8b71b3f429a989f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1716207786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4212,8 +4260,9 @@ GameObject:
   - 222: {fileID: 2057492003}
   - 114: {fileID: 2057492002}
   - 114: {fileID: 2057492001}
+  - 114: {fileID: 2057492004}
   m_Layer: 5
-  m_Name: Part-time_Pannel
+  m_Name: Part-time_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4281,6 +4330,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2057491999}
+--- !u!114 &2057492004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057491999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbc2ea0afe564a4c8b71b3f429a989f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2062989856
 GameObject:
   m_ObjectHideFlags: 0
