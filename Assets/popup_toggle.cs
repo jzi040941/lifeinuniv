@@ -16,7 +16,7 @@ public class popup_toggle : MonoBehaviour {
 	}
 
 	public void Example() {
-		print ("a");
-       // gameObject.SetActive(!gameObject.activeSelf);
+	//print ("a");
+       gameObject.SetActive(!gameObject.activeSelf);
     }
 }
