@@ -13,7 +13,7 @@ public class main_screen_health : MonoBehaviour {
             handle_HealthBar();
         }
     } // 현재 체력
-    public int maxHealth; // 최대 체력
+    public int maxHealth = 100; // 최대 체력
     public Text healthText; // 체력 수치 표시
     public Image handleHealth;
     private const int ScaleValue = 10;
