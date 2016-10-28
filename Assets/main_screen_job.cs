@@ -13,7 +13,7 @@ public class main_screen_job : MonoBehaviour {
 
         }
     }
-    public int maxJob;
+    public int maxJob = 100;
     public Text jobText;
     public Image HandleJob;
 
