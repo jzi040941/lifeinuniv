@@ -5,7 +5,7 @@ public class Closing_pannel : MonoBehaviour
 {
     void Start()
     {
-            Invoke("Closing", 3);
+            //Invoke("Closing", 3);
     }
 
     void Closing()
