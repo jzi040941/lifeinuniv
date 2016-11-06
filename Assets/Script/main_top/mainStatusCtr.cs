@@ -7,10 +7,10 @@ public class MainStatusCtr : MonoBehaviour{
 	private int attr;
 	private int money;
 	private int act;
-	private int week;	
+	private int week= 1;
 	private int sem;
 	private bool isTest;
-	private int year;
+	private int year = 1;
 	public int Health{
 		get{ return health; }
 		set{ health = value; }
@@ -35,8 +35,10 @@ public class MainStatusCtr : MonoBehaviour{
 		get { return act; }
 		set { 
 			act = value;
-			//if(act == 4)
-
+			if (act == 0) {
+				act = 3;
+				Week += 1;
+			}
 		}
 	}
 	public int Week{
@@ -45,11 +47,20 @@ public class MainStatusCtr : MonoBehaviour{
 		}
 		set{
 			week = value;
+			if (week == 9) {
+				week = 1;
+				Semester += 1;
+			}
 		}
 	}
 	public int Semester{        
 		get{ return sem; }
-		set{ sem = value; }
+		set{ sem = value;
+			if (sem == 5) {
+				sem = 1;
+				Year += 1;
+			}
+		}
 	}
 	public int IsTest{
 		get{ return health; }

@@ -15,7 +15,7 @@ public class popup_panels : MonoBehaviour {
 			//Debug.Log ("panel" + i);
 
 			//mainStatusCtr.Health += 10;
-		}
+
 	}
 	
 	// Update is called once per frame
