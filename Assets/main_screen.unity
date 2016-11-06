@@ -554,7 +554,7 @@ GameObject:
   - 114: {fileID: 102195147}
   m_Layer: 5
   m_Name: Home
-  m_TagString: Untagged
+  m_TagString: uninteratible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3103,7 +3103,7 @@ GameObject:
   - 114: {fileID: 474685510}
   m_Layer: 5
   m_Name: Setting
-  m_TagString: Untagged
+  m_TagString: uninteratible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3368,7 +3368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &500932426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4352,7 +4352,7 @@ GameObject:
   - 114: {fileID: 686378950}
   m_Layer: 5
   m_Name: Tutorial
-  m_TagString: Untagged
+  m_TagString: uninteratible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12558,7 +12558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2021198388
 RectTransform:
   m_ObjectHideFlags: 0

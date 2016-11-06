@@ -1,16 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class popup_panels : MonoBehaviour {
 
+
+	public GameObject[] inactive;
 
 	public GameObject[] main_panels;
 	// Use this for initialization
 	void Start () {
 		//main_panels = GameObject.FindGameObjectsWithTag ("main_top_panel");
-		for (int i = 0; i < main_panels.Length; i++) {
-			Debug.Log ("panel" + i);	
-		}
+
+		inactive = GameObject.FindGameObjectsWithTag ("uninteratible");
+
+		/*
+		Button btn = inactive [0].GetComponent<Button> ();
+		btn.interactable = false;
+		*/
+
 	}
 	
 	// Update is called once per frame
@@ -33,8 +40,14 @@ public class popup_panels : MonoBehaviour {
 		main_panels [num].SetActive (!main_panels [num].activeSelf);
 
 		for (int i = 0; i < main_panels.Length; i++) {
-			if (i == num)
+			if (i == num){
+
+				foreach(GameObject a in inactive){
+					Button btn = a.GetComponent<Button> ();
+					btn.interactable = !main_panels [num].activeSelf;
+				}
 				continue;
+			}
 			main_panels [i].SetActive (false);
 		}
 	}

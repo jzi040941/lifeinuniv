@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - main_top_panel
+  - uninteratible
   layers:
   - Default
   - TransparentFX
