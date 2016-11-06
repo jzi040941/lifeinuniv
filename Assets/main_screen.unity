@@ -7517,6 +7517,7 @@ GameObject:
   - 224: {fileID: 1647447468}
   - 222: {fileID: 1647447470}
   - 114: {fileID: 1647447469}
+  - 114: {fileID: 1647447471}
   m_Layer: 5
   m_Name: StatusBarPanel
   m_TagString: Untagged
@@ -7579,6 +7580,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1647447467}
+--- !u!114 &1647447471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647447467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704a6b62e974ed24a82a7fa342574f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarSlider: {fileID: 1439291093}
+  jobBarSlider: {fileID: 1154092995}
+  attrBarSlider: {fileID: 1016453067}
 --- !u!1 &1689781677
 GameObject:
   m_ObjectHideFlags: 0
