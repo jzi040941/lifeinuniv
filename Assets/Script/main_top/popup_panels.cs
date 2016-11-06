@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class popup_panels : MonoBehaviour {
 	//MainStatusCtr mainStatusCtr; 
 	//GameObject ui_instance;
+
+	public GameObject[] inactive;
 
 	public GameObject[] main_panels;
 	// Use this for initialization
@@ -11,10 +13,15 @@ public class popup_panels : MonoBehaviour {
 		//ui_instance = GameObject.Find ("UI");
 		//mainStatusCtr = ui_instance.GetComponent<MainStatusCtr> ();
 		//main_panels = GameObject.FindGameObjectsWithTag ("main_top_panel");
-		//for (int i = 0; i < main_panels.Length; i++) {
-			//Debug.Log ("panel" + i);
 
-			//mainStatusCtr.Health += 10;
+
+		inactive = GameObject.FindGameObjectsWithTag ("uninteratible");
+
+		/*
+		Button btn = inactive [0].GetComponent<Button> ();
+		btn.interactable = false;
+		*/
+
 
 	}
 	
@@ -38,8 +45,14 @@ public class popup_panels : MonoBehaviour {
 		main_panels [num].SetActive (!main_panels [num].activeSelf);
 
 		for (int i = 0; i < main_panels.Length; i++) {
-			if (i == num)
+			if (i == num){
+
+				foreach(GameObject a in inactive){
+					Button btn = a.GetComponent<Button> ();
+					btn.interactable = !main_panels [num].activeSelf;
+				}
 				continue;
+			}
 			main_panels [i].SetActive (false);
 		}
 	}
