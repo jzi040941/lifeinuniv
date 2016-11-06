@@ -2,14 +2,19 @@
 using System.Collections;
 
 public class popup_panels : MonoBehaviour {
-
+	//MainStatusCtr mainStatusCtr; 
+	//GameObject ui_instance;
 
 	public GameObject[] main_panels;
 	// Use this for initialization
 	void Start () {
+		//ui_instance = GameObject.Find ("UI");
+		//mainStatusCtr = ui_instance.GetComponent<MainStatusCtr> ();
 		//main_panels = GameObject.FindGameObjectsWithTag ("main_top_panel");
-		for (int i = 0; i < main_panels.Length; i++) {
-			Debug.Log ("panel" + i);	
+		//for (int i = 0; i < main_panels.Length; i++) {
+			//Debug.Log ("panel" + i);
+
+			//mainStatusCtr.Health += 10;
 		}
 	}
 	
