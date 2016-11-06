@@ -15,7 +15,6 @@ public class popup_panels : MonoBehaviour {
 			//Debug.Log ("panel" + i);
 
 			//mainStatusCtr.Health += 10;
-		}
 	}
 	
 	// Update is called once per frame
@@ -35,7 +34,7 @@ public class popup_panels : MonoBehaviour {
 
 	public void panelopen(int num){
 		//int num = 0;
-		main_panels [num].SetActive (!main_panels [num].activeSelf);
+		main_panels[num].SetActive (!main_panels [num].activeSelf);
 
 		for (int i = 0; i < main_panels.Length; i++) {
 			if (i == num)

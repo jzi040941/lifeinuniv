@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using System.IO;
 
 public class MainStatusCtr : MonoBehaviour{
 	private int health= 0;
@@ -58,8 +60,32 @@ public class MainStatusCtr : MonoBehaviour{
 	public int Year{
 		get{ return year; }
 		set{ year = value; }
-	} 
+	}
+    StreamReader sc = null;
+    private string str_init;
+    private string[] val;
 
+    void Start(){
+        int val_in;
+        sc = new StreamReader("last_status.txt");
+        str_init = sc.ReadLine();
+        val = str_init.Split(' ');
+        for (int i=0;i<val.Length;i++) {
+            val_in = Int32.Parse(val[i]);
+
+            switch (i) {
+                case 0: Health = val_in; break;
+                case 1: Job = val_in; break;
+                case 2: Attr = val_in; break;
+                case 3: Money = val_in; break;
+                case 4: Week = val_in; break;
+                case 5: Semester = val_in; break;
+                case 6: Act = val_in; break;
+                case 7: Year = val_in; break;
+            }
+        }
+        sc.Close();
+    }
 
 	void Update(){
 
