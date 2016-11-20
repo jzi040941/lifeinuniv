@@ -27,9 +27,19 @@ public class Closing_pannel : MonoBehaviour
         GameObject.Find("activity_Panel").SetActive(false);
 
         mainStatusCtr.Act = mainStatusCtr.Act - 1;
-//        Debug.Log("remain " + mainStatusCtr.Act + " Act");
+        //      Debug.Log("remain " + mainStatusCtr.Act + "Act");
 
-		foreach(GameObject a in inactive){
+        if (gameObject.name == "Class_Panel")
+        {
+            mainStatusCtr.Job = mainStatusCtr.Job + 10;
+        }
+
+        if (gameObject.name == "Part-time_Panel")
+        {
+            mainStatusCtr.Attr = mainStatusCtr.Attr + 10;
+        }
+
+        foreach (GameObject a in inactive){
 			Button btn = a.GetComponent<Button> ();
 			btn.interactable = true;
 		}
