@@ -5,9 +5,11 @@ using UnityEngine.UI;
 public class profileStatus : MonoBehaviour {
     MainStatusCtr mainStatusCtr;
     GameObject ui_instance,health_p_inst,job_p_inst,attr_p_inst;
+    GameObject money_inst;
     public Slider profileHealthBar; // 메인 화면의 체력 Bar
     public Slider profileJobBar; // 메인 화면의 취업률 Bar
     public Slider profileAttrBar; // 메인 화면의 매력 Bar
+    public Text money_text;
 
     // Use this for initialization
     void Start () {
@@ -28,6 +30,8 @@ public class profileStatus : MonoBehaviour {
         {
             profileAttrBar = attr_p_inst.GetComponent<Slider>();
         }
+        money_inst = GameObject.Find("MoneyText");
+        money_text = money_inst.GetComponent<Text>();
         profileHealthBar.minValue = 0;
         profileHealthBar.maxValue = 100;
         profileJobBar.minValue = 0;
@@ -41,5 +45,6 @@ public class profileStatus : MonoBehaviour {
         profileHealthBar.value = mainStatusCtr.Health;
         profileJobBar.value = mainStatusCtr.Job;
         profileAttrBar.value = mainStatusCtr.Attr;
+        money_text.text = mainStatusCtr.Money.ToString();
     }
 }

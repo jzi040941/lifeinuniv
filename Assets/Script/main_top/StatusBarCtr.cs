@@ -5,9 +5,11 @@ using UnityEngine.UI;
 public class StatusBarCtr : MonoBehaviour {
     MainStatusCtr mainStatusCtr;
     GameObject ui_instance,health_inst,job_inst,attr_inst;
+    GameObject h_text_ins, j_text_ins, a_text_ins;
     public Slider mainHealthBar; // 메인 화면의 체력 Bar
     public Slider mainJobBar; // 메인 화면의 취업률 Bar
     public Slider mainAttrBar; // 메인 화면의 매력 Bar
+    public Text h_text,j_text,a_text;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +36,12 @@ public class StatusBarCtr : MonoBehaviour {
         mainJobBar.maxValue = 100;
         mainAttrBar.minValue = 0;
         mainAttrBar.maxValue = 100;
+        h_text_ins = GameObject.Find("HealthText");
+        h_text = h_text_ins.GetComponent<Text>();
+        j_text_ins = GameObject.Find("JobText");
+        j_text = j_text_ins.GetComponent<Text>();
+        a_text_ins = GameObject.Find("AttrText");
+        a_text = a_text_ins.GetComponent<Text>();
     }
 	
 	// Update is called once per frame
@@ -41,5 +49,8 @@ public class StatusBarCtr : MonoBehaviour {
         mainHealthBar.value = mainStatusCtr.Health;
         mainJobBar.value = mainStatusCtr.Job;
         mainAttrBar.value = mainStatusCtr.Attr;
-	}
+        h_text.text = mainStatusCtr.Health.ToString();
+        j_text.text = mainStatusCtr.Job.ToString();
+        a_text.text = mainStatusCtr.Attr.ToString();
+    }
 }
