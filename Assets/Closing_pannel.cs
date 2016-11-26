@@ -5,11 +5,11 @@ public class Closing_pannel : MonoBehaviour
 {
     MainStatusCtr mainStatusCtr;
     GameObject ui_instance;
-	Image myImageComponent;
+    Image myImageComponent;
 	Sprite first;
-	public Sprite second;
-
+	public Sprite second;     
     public GameObject[] inactive;
+
     void Start()
     {
 		inactive = GameObject.FindGameObjectsWithTag ("uninteratible");
@@ -17,16 +17,35 @@ public class Closing_pannel : MonoBehaviour
 		first = myImageComponent.sprite;
 
         ui_instance = GameObject.Find("UI");
-        mainStatusCtr = ui_instance.GetComponent<MainStatusCtr>();
+        mainStatusCtr = ui_instance.GetComponent<MainStatusCtr>();  
+        
     }
 
-	void changetosecond(){
-		myImageComponent.sprite = second;
-	}
+    void changetosecond()
+    {
+        myImageComponent.sprite = second;
+    }
+
+    void changetofirst()
+    {
+        myImageComponent.sprite = first;
+    }
+
     public void invokereset()
     {
-		Invoke ("changetosecond", 1.5f);
+        Invoke("changetosecond", 0.5f);
+        Invoke("changetofirst", 1.0f);
+        Invoke("changetosecond", 1.5f);
+        Invoke("changetofirst", 2.0f);
+        Invoke("changetosecond", 2.5f);
+
         Invoke("Closing", 3);
+    }
+
+    void exam_close()
+    {
+        //GameObject.Find("examp_panel").SetActive(false);\
+        GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(false);
     }
 
     void Closing()
@@ -46,6 +65,15 @@ public class Closing_pannel : MonoBehaviour
 		}
 		gameObject.SetActive(false);
 		myImageComponent.sprite = first;
+
+        //방학중 패널 뜨게 ()안에 조건
+        if (mainStatusCtr.Week % 4 == 0 && mainStatusCtr.Act == 3)
+        {
+            GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(true);
+
+            Invoke("exam_close", 3);
+            //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
+        }
     }
 
 	void chanagestatus(string name){
