@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Closing_pannel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\main_top\MainStatusCtr.cs">
     <Files>
-      <File FileName="Assets\popup_toggle.cs" Line="1" Column="1" />
+      <File FileName="Assets\popup_toggle.cs" Line="22" Column="1" />
       <File FileName="Assets\Script\main_top\popup_panels.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\main_top\changeText.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\main_top\MainStatusCtr.cs" Line="1" Column="1" />
-      <File FileName="Assets\Closing_pannel.cs" Line="17" Column="45" />
+      <File FileName="Assets\Script\main_top\MainStatusCtr.cs" Line="75" Column="25" />
+      <File FileName="Assets\Closing_pannel.cs" Line="20" Column="67" />
+      <File FileName="Assets\app_off.cs" Line="18" Column="86" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
