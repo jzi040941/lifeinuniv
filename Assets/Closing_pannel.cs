@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Closing_pannel : MonoBehaviour
 {
     MainStatusCtr mainStatusCtr;
+    EndingCtr end_check;
     GameObject ui_instance;
 	Image myImageComponent;
 	Sprite first;
@@ -18,6 +19,7 @@ public class Closing_pannel : MonoBehaviour
 
         ui_instance = GameObject.Find("UI");
         mainStatusCtr = ui_instance.GetComponent<MainStatusCtr>();
+        end_check = ui_instance.GetComponent<EndingCtr>();
     }
 
 	void changetosecond(){
@@ -39,7 +41,9 @@ public class Closing_pannel : MonoBehaviour
 
 
 		this.chanagestatus (gameObject.name);
-			
+
+        end_check.Ending_Check(mainStatusCtr);
+
         foreach (GameObject a in inactive){
 			Button btn = a.GetComponent<Button> ();
 			btn.interactable = true;
