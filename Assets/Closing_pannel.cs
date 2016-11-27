@@ -42,10 +42,28 @@ public class Closing_pannel : MonoBehaviour
         Invoke("Closing", 3);
     }
 
+    void exam_open()
+    {
+        //GameObject.Find("examp_panel").SetActive(false);\
+        GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(true);
+    }
+
     void exam_close()
     {
         //GameObject.Find("examp_panel").SetActive(false);\
         GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(false);
+    }
+
+    void vaca_open()
+    {
+        //GameObject.Find("examp_panel").SetActive(false);\
+        GameObject.Find("UI").transform.FindChild("vaca_panel").gameObject.SetActive(true);
+    }
+
+    void vaca_close()
+    {
+        //GameObject.Find("examp_panel").SetActive(false);\
+        GameObject.Find("UI").transform.FindChild("vaca_panel").gameObject.SetActive(false);
     }
 
     void Closing()
@@ -66,12 +84,19 @@ public class Closing_pannel : MonoBehaviour
 		gameObject.SetActive(false);
 		myImageComponent.sprite = first;
 
-        //방학중 패널 뜨게 ()안에 조건
-        if (mainStatusCtr.Week % 4 == 0 && mainStatusCtr.Act == 3)
+        //시험중 패널 뜨게 ()안에 조건
+        if ( ((mainStatusCtr.Week  == 5) || ((mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1))) && mainStatusCtr.Act == 3)
         {
-            GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(true);
+            Invoke("exam_open", 0.1f);
+            Invoke("exam_close", 3.1f);
+            //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
+        }
 
-            Invoke("exam_close", 3);
+        //방학중 패널 뜨게 ()안에 조건
+        if ( ( (mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1) ) && mainStatusCtr.Act == 3)
+        {
+            Invoke("vaca_open", 3.2f);
+            Invoke("vaca_close", 6.2f);
             //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
         }
     }
