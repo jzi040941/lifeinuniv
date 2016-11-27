@@ -7,72 +7,37 @@ public class Closing_pannel : MonoBehaviour
     EndingCtr end_check;
     GameObject ui_instance;
     Image myImageComponent;
-	//Sprite first;
-	//public Sprite second;
+
     bool library_flag = false;
     bool drunken_flag = false;
 	public GameObject[] inactive;
-
     void Start()
     {
 		inactive = GameObject.FindGameObjectsWithTag ("uninteratible");
 
-		//myImageComponent = GetComponent<Image>(); 
-		//first = myImageComponent.sprite;
-
         ui_instance = GameObject.Find("UI");
+       // Debug.Log("hello" + ui_instance.name);
         mainStatusCtr = ui_instance.GetComponent<MainStatusCtr>();
 
         end_check = ui_instance.GetComponent<EndingCtr>();
+        
     }
-
-    //public void invokereset()
-    //{
-    //    Invoke("changetosecond", 0.5f);
-    //    Invoke("changetofirst", 1.0f);
-    //    Invoke("changetosecond", 1.5f);
-    //    Invoke("changetofirst", 2.0f);
-    //    Invoke("changetosecond", 2.5f);
-
-    //    Invoke("Closing", 3);
-    //}
-
-    //void exam_open()
-    //{
-    //    //GameObject.Find("examp_panel").SetActive(false);\
-    //    GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(true);
-    //}
-
-    //void exam_close()
-    //{
-    //    //GameObject.Find("examp_panel").SetActive(false);\
-    //    GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(false);
-    //}
-
-    //void vaca_open()
-    //{
-    //    //GameObject.Find("examp_panel").SetActive(false);\
-    //    GameObject.Find("UI").transform.FindChild("vaca_panel").gameObject.SetActive(true);
-    //}
-
-    //void vaca_close()
-    //{
-    //    //GameObject.Find("examp_panel").SetActive(false);\
-    //    GameObject.Find("UI").transform.FindChild("vaca_panel").gameObject.SetActive(false);
-    //}
-
+    public void invoke()
+    {
+        Invoke("Closing", 3.0f);
+    }
+ 
     public void Closing()
     {
-        
+
+
         GameObject.Find("activity_Panel").SetActive(false);
 
         mainStatusCtr.Act = mainStatusCtr.Act - 1;
-        //      Debug.Log("remain " + mainStatusCtr.Act + "Act");
 
 
 		this.chanagestatus (gameObject.name);
 
-        //end_check.ending_check(mainStatusCtr,library_flag,drunken_flag);
 		end_check.ending_check();
         drunken_flag = false; library_flag = false;
 
@@ -81,24 +46,8 @@ public class Closing_pannel : MonoBehaviour
 			btn.interactable = true;
 		}
 
-		//gameObject.SetActive(false);
-		//myImageComponent.sprite = first;
+        gameObject.SetActive(false);
 
-  //      //?�험�? ?�널 ?�게 ()?�에 조건
-  //      if ( ((mainStatusCtr.Week  == 5) || ((mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1))) && mainStatusCtr.Act == 3)
-  //      {
-  //          Invoke("exam_open", 0.1f);
-  //          Invoke("exam_close", 3.1f);
-  //          //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
-  //      }
-
-  //      //방학�? ?�널 ?�게 ()?�에 조건
-  //      if ( ( (mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1) ) && mainStatusCtr.Act == 3)
-  //      {
-  //          Invoke("vaca_open", 3.2f);
-  //          Invoke("vaca_close", 6.2f);
-  //          //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
-  //      }
     }
 
 	void chanagestatus(string name){
@@ -130,4 +79,6 @@ public class Closing_pannel : MonoBehaviour
 			mainStatusCtr.Money += Random.Range (100, 301);
 		}
 	}
+
+
 }

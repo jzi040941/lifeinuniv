@@ -10,7 +10,7 @@ public class change_panel : MonoBehaviour {
     Sprite first;
     public Sprite second;
 
-
+    
     // Use this for initialization
     void Start () {
 
@@ -34,13 +34,13 @@ public class change_panel : MonoBehaviour {
 
     public void invokereset()
     {
+        
         Invoke("changetosecond", 0.5f);
         Invoke("changetofirst", 1.0f);
         Invoke("changetosecond", 1.5f);
         Invoke("changetofirst", 2.0f);
         Invoke("changetosecond", 2.5f);
-
-        Invoke("Closing2", 3);
+        Invoke("check_season", 3.1f);
     }
 
     void exam_open()
@@ -68,8 +68,8 @@ public class change_panel : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Closing2() {
-        gameObject.SetActive(false);
+    void check_season() {
+       // gameObject.SetActive(false);
         myImageComponent.sprite = first;
 
         //?�험�? ?�널 ?�게 ()?�에 조건

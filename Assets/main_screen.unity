@@ -611,8 +611,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1177268276}
+      - m_Target: {fileID: 1177268277}
         m_MethodName: invokereset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1177268276}
+        m_MethodName: invoke
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6391,6 +6402,7 @@ GameObject:
   - 114: {fileID: 691105808}
   - 114: {fileID: 691105807}
   - 114: {fileID: 691105810}
+  - 114: {fileID: 691105811}
   m_Layer: 5
   m_Name: Date_Panel
   m_TagString: Untagged
@@ -6461,6 +6473,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 691105805}
 --- !u!114 &691105810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691105805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282e6307543785b4a85bf637461d60ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  second: {fileID: 21300000, guid: aa3c5d552be8f72459d3b34472e30c2d, type: 3}
+--- !u!114 &691105811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -10367,6 +10391,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 691105811}
+        m_MethodName: invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1123725368
@@ -10979,6 +11014,7 @@ GameObject:
   - 114: {fileID: 1165338203}
   - 114: {fileID: 1165338202}
   - 114: {fileID: 1165338205}
+  - 114: {fileID: 1165338206}
   m_Layer: 5
   m_Name: Drinking_Panel
   m_TagString: Untagged
@@ -11056,6 +11092,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1165338200}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282e6307543785b4a85bf637461d60ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  second: {fileID: 21300000, guid: dbaf8315036ed6f45bbc0d0e1ff566e6, type: 3}
+--- !u!114 &1165338206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165338200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bbc2ea0afe564a4c8b71b3f429a989f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -11071,8 +11119,8 @@ GameObject:
   - 222: {fileID: 1177268275}
   - 114: {fileID: 1177268274}
   - 114: {fileID: 1177268273}
-  - 114: {fileID: 1177268276}
   - 114: {fileID: 1177268277}
+  - 114: {fileID: 1177268276}
   m_Layer: 5
   m_Name: Class_Panel
   m_TagString: Untagged
@@ -11148,7 +11196,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1177268271}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bbc2ea0afe564a4c8b71b3f429a989f, type: 3}
   m_Name: 
@@ -14592,6 +14640,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2057492005}
+        m_MethodName: invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1616293647
@@ -14972,6 +15031,7 @@ GameObject:
   - 114: {fileID: 1689781680}
   - 114: {fileID: 1689781679}
   - 114: {fileID: 1689781682}
+  - 114: {fileID: 1689781683}
   m_Layer: 5
   m_Name: Study_Panel
   m_TagString: Untagged
@@ -15042,6 +15102,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1689781677}
 --- !u!114 &1689781682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689781677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282e6307543785b4a85bf637461d60ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  second: {fileID: 21300000, guid: 6689e13b3fe21ff46b4b1a91caac9c7b, type: 3}
+--- !u!114 &1689781683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -16499,6 +16571,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1689781683}
+        m_MethodName: invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1879504565
@@ -17624,6 +17707,7 @@ GameObject:
   - 114: {fileID: 2057492002}
   - 114: {fileID: 2057492001}
   - 114: {fileID: 2057492004}
+  - 114: {fileID: 2057492005}
   m_Layer: 5
   m_Name: Part-time_Panel
   m_TagString: Untagged
@@ -17694,6 +17778,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2057491999}
 --- !u!114 &2057492004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057491999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282e6307543785b4a85bf637461d60ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  second: {fileID: 21300000, guid: aa3c5d552be8f72459d3b34472e30c2d, type: 3}
+--- !u!114 &2057492005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -18207,6 +18303,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1165338205}
         m_MethodName: invokereset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1165338206}
+        m_MethodName: invoke
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
