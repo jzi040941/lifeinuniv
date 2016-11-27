@@ -13,6 +13,7 @@ public class MainStatusCtr : MonoBehaviour{
 	private int sem;
 	private bool isTest;
 	private int year = 1;
+    float[] sc_sem = new float[8];
 	public int Health{
 		get{ return health; }
 		set{ health = value; }

@@ -4,10 +4,13 @@ using UnityEngine.UI;
 public class Closing_pannel : MonoBehaviour
 {
     MainStatusCtr mainStatusCtr;
+    EndingCtr end_check;
     GameObject ui_instance;
 	Image myImageComponent;
 	Sprite first;
 	public Sprite second;
+    bool library_flag = false;
+    bool drunken_flag = false;
 
     public GameObject[] inactive;
     void Start()
@@ -18,6 +21,7 @@ public class Closing_pannel : MonoBehaviour
 
         ui_instance = GameObject.Find("UI");
         mainStatusCtr = ui_instance.GetComponent<MainStatusCtr>();
+        end_check = ui_instance.GetComponent<EndingCtr>();
     }
 
 	void changetosecond(){
@@ -39,7 +43,10 @@ public class Closing_pannel : MonoBehaviour
 
 
 		this.chanagestatus (gameObject.name);
-			
+
+        end_check.Ending_Check(mainStatusCtr,library_flag,drunken_flag);
+        drunken_flag = false; library_flag = false;
+
         foreach (GameObject a in inactive){
 			Button btn = a.GetComponent<Button> ();
 			btn.interactable = true;
@@ -61,12 +68,14 @@ public class Closing_pannel : MonoBehaviour
 			mainStatusCtr.Job += Random.Range (3, 8);
 			mainStatusCtr.Attr += Random.Range (3, 8);
 			mainStatusCtr.Money -= Random.Range (30, 101);
+            library_flag = true;
 		}
 
 		if (name == "Drinking_Panel")
 		{
 			mainStatusCtr.Health -= Random.Range (15, 31);
 			mainStatusCtr.Money -= Random.Range (200, 401);
+            drunken_flag = true;
 		}
 
 		if (name == "Part-time_Panel")
