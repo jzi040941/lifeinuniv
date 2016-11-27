@@ -26,7 +26,7 @@ public class mainchar_ani : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        InvokeRepeating("changemainchar_1", 0.7f, 1.4f);
-        InvokeRepeating("changemainchar_2", 1.4f, 1.4f);
+        InvokeRepeating("changemainchar_1", 1.0f, 2.0f);
+        InvokeRepeating("changemainchar_2", 2.0f, 2.0f);
     }
 }
