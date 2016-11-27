@@ -18,15 +18,15 @@ public class MainStatusCtr : MonoBehaviour{
     public float[] sc_sem = new float[8] { -1,-1,-1,-1,-1,-1,-1,-1};
 	public int Health{
 		get{ return health; }
-		set{ health = value; }
+		set{ health = value; if (health > 100) health = 100; }
 	} 
 	public int Job{
 		get{ return job; }
-		set{ job = value;}
+		set{ job = value; if (job > 100) job = 100; }
 	}
 	public int Attr{
 		get{ return attr;}
-		set{ attr = value;}
+		set{ attr = value; if (Attr > 100) Attr = 100; }
 	}
 	public int Money{
 		get{
@@ -97,6 +97,7 @@ public class MainStatusCtr : MonoBehaviour{
 		try
 		{
 			System.IO.StreamReader sc = System.IO.File.OpenText(Application.persistentDataPath + "/last_status.txt");
+
 			str_init = sc.ReadLine();
 			val = str_init.Split(' ');
 			for (int i=0;i<val.Length;i++) {
@@ -117,8 +118,9 @@ public class MainStatusCtr : MonoBehaviour{
 			}
 			sc.Close();
 		}
-		catch (System.IO.FileNotFoundException)
-		{
+		//catch (System.IO.FileNotFoundException)
+        catch (Exception)
+        {
 			EndingCtr temp = GameObject.Find ("UI").GetComponent<EndingCtr> ();
 			temp.restart_Init (this);
 		}

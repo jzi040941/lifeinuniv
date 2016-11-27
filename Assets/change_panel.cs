@@ -40,7 +40,7 @@ public class change_panel : MonoBehaviour {
         Invoke("changetosecond", 1.5f);
         Invoke("changetofirst", 2.0f);
         Invoke("changetosecond", 2.5f);
-        Invoke("check_season", 3.1f);
+        Invoke("check_season", 3.05f);
     }
 
     void exam_open()
@@ -83,8 +83,8 @@ public class change_panel : MonoBehaviour {
         //방학�? ?�널 ?�게 ()?�에 조건
         if (((mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1)) && mainStatusCtr.Act == 3)
         {
-            Invoke("vaca_open", 3.2f);
-            Invoke("vaca_close", 6.2f);
+            Invoke("vaca_open", 3.15f);
+            Invoke("vaca_close", 6.15f);
             //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
         }
     }
