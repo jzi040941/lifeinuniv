@@ -9,6 +9,8 @@ public class Closing_pannel : MonoBehaviour
 	Image myImageComponent;
 	Sprite first;
 	public Sprite second;
+    bool library_flag = false;
+    bool drunken_flag = false;
 
     public GameObject[] inactive;
     void Start()
@@ -42,7 +44,8 @@ public class Closing_pannel : MonoBehaviour
 
 		this.chanagestatus (gameObject.name);
 
-        end_check.Ending_Check(mainStatusCtr);
+        end_check.Ending_Check(mainStatusCtr,library_flag,drunken_flag);
+        drunken_flag = false; library_flag = false;
 
         foreach (GameObject a in inactive){
 			Button btn = a.GetComponent<Button> ();
@@ -65,12 +68,14 @@ public class Closing_pannel : MonoBehaviour
 			mainStatusCtr.Job += Random.Range (3, 8);
 			mainStatusCtr.Attr += Random.Range (3, 8);
 			mainStatusCtr.Money -= Random.Range (30, 101);
+            library_flag = true;
 		}
 
 		if (name == "Drinking_Panel")
 		{
 			mainStatusCtr.Health -= Random.Range (15, 31);
 			mainStatusCtr.Money -= Random.Range (200, 401);
+            drunken_flag = true;
 		}
 
 		if (name == "Part-time_Panel")
