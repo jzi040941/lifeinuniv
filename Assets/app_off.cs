@@ -15,7 +15,7 @@ public class app_off : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKey("escape")){
-            sw = new StreamWriter("last_status.txt", false);
+			sw = new StreamWriter(Application.persistentDataPath + "/last_status.txt", false);
             sw.Write(mainStatusCtr.Health.ToString()+" ");
             sw.Write(mainStatusCtr.Job.ToString()+" ");
             sw.Write(mainStatusCtr.Attr.ToString()+" ");

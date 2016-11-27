@@ -78,25 +78,38 @@ public class MainStatusCtr : MonoBehaviour{
 
 	void Start(){
 		int val_in;
-		sc = new StreamReader("last_status.txt");
-		str_init = sc.ReadLine();
-		val = str_init.Split(' ');
-		for (int i=0;i<val.Length;i++) {
-			val_in = Int32.Parse(val[i]);
 
-			switch (i) {
-			case 0: Health = val_in; break;
-			case 1: Job = val_in; break;
-			case 2: Attr = val_in; break;
-			case 3: Money = val_in; break;
-			case 4: Week = val_in; break;
-			case 5: Semester = val_in; break;
-			case 6: Act = val_in; break;
-			case 7: Year = val_in; break;
+		try
+		{
+			System.IO.StreamReader sc = System.IO.File.OpenText(Application.persistentDataPath + "/last_status.txt");
+			str_init = sc.ReadLine();
+			val = str_init.Split(' ');
+			for (int i=0;i<val.Length;i++) {
+				val_in = Int32.Parse(val[i]);
+
+				switch (i) {
+				case 0: Health = val_in; break;
+				case 1: Job = val_in; break;
+				case 2: Attr = val_in; break;
+				case 3: Money = val_in; break;
+				case 4: Week = val_in; break;
+				case 5: Semester = val_in; break;
+				case 6: Act = val_in; break;
+				case 7: Year = val_in; break;
+				}
 			}
+			sc.Close();
 		}
-		sc.Close();
+		catch (System.IO.FileNotFoundException)
+		{
+			Debug.Log ("filedoesnotexisit");
+		}
+		//sc = new StreamReader("last_status.txt");
+		//sc = new StreamReader(Application.persistentDataPath + "/last_status.txt");
+
+			
 	}
+
 
 	void Update(){
 
