@@ -78,6 +78,7 @@ public class EndingCtr : MonoBehaviour {
         else if (mainStatusCtr.ClassRate <= 2){
             return true;
         }
+        mainStatusCtr.sc_sem[mainStatusCtr.Semester - 1] = Random.Range(2.2f, 4.2f);
         return false;
     }
 
