@@ -55,6 +55,7 @@ public class Closing_pannel : MonoBehaviour
 		{
 			mainStatusCtr.Health -= Random.Range(5,15);
 			mainStatusCtr.Job = mainStatusCtr.Job + Random.Range(5,15);
+            mainStatusCtr.ClassRate++;
 		}
 
 		if (name == "Study_Panel")
@@ -64,6 +65,7 @@ public class Closing_pannel : MonoBehaviour
 			mainStatusCtr.Attr += Random.Range (3, 8);
 			mainStatusCtr.Money -= Random.Range (30, 101);
             library_flag = true;
+            mainStatusCtr.LibRate++;
 		}
 
 		if (name == "Drinking_Panel")
