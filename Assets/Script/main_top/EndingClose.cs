@@ -33,5 +33,7 @@ public class EndingClose : MonoBehaviour {
         mainStatusCtr.Semester = 1;
         mainStatusCtr.Act = 3;
         mainStatusCtr.Year = 1;
+        mainStatusCtr.ClassRate = 0;
+        mainStatusCtr.LibRate = 0;
     }
 }

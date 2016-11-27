@@ -19,39 +19,56 @@ public class EndingCtr : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        /*
-        if (mainStatusCtr.Health == 0)
-        {
-            h_zero_ins.SetActive(!h_zero_ins.activeSelf);
-            restart_Init();
-        } // 과로사 엔딩
-        else if (mainStatusCtr.Health <= 20)
-        {
-            int rand = (int)Random.Range(0.0f, 100.0f);
-            if (rand < 21 - mainStatusCtr.Health)
-            {
-                drunken_ins.SetActive(!drunken_ins.activeSelf);
-                restart_Init();
-            }
-        }
-        */
+       
     }
 
-    public void ending_check() {
+    public void ending_check(MainStatusCtr mainStatusCtr,bool library,bool drunken) {
         if (mainStatusCtr.Health == 0)
         {
             h_zero_ins.SetActive(!h_zero_ins.activeSelf);
-            restart_Init();
         } // 과로사 엔딩
         else if (mainStatusCtr.Health <= 20)
         {
             int rand = (int)Random.Range(0.0f, 100.0f);
-            if (rand < 21 - mainStatusCtr.Health)
-            {
-                drunken_ins.SetActive(!drunken_ins.activeSelf);
-                restart_Init();
+            if (rand < 10) {
+                if (library == true)
+                {
+                    stone_ins.SetActive(!stone_ins.activeSelf);
+                } // 화석
+                if (drunken == true)
+                {
+                    drunken_ins.SetActive(!drunken_ins.activeSelf);
+                } // 흑역사
             }
         }
+    }
+
+    public bool ending_fail_check(MainStatusCtr mainStatusCtr)
+    {
+        int r_num = (int)Random.Range(0.0f, 100.0f);
+        if (mainStatusCtr.ClassRate >= 4){
+            if (mainStatusCtr.LibRate <= 2 && r_num < 5) {
+                fail_ins.SetActive(!fail_ins.activeSelf);
+                return true;
+            }
+            else {
+                mainStatusCtr.sc_sem[mainStatusCtr.Semester - 1] = Random.Range(2.2f,4.2f);
+            }
+        }
+        else if (mainStatusCtr.ClassRate > 2) {
+            if (mainStatusCtr.LibRate <= 3 && r_num < 10) {
+                fail_ins.SetActive(!fail_ins.activeSelf);
+                return true;
+            }
+            else
+            {
+                mainStatusCtr.sc_sem[mainStatusCtr.Semester - 1] = Random.Range(2.2f, 4.2f);
+            }
+        }
+        else if (mainStatusCtr.ClassRate <= 2){
+            return true;
+        }
+        return false;
     }
 
     void restart_Init(){
@@ -62,5 +79,11 @@ public class EndingCtr : MonoBehaviour {
         mainStatusCtr.Semester = 1;
         mainStatusCtr.Act = 3;
         mainStatusCtr.Year = 1;
+        mainStatusCtr.ClassRate = 0;
+        mainStatusCtr.LibRate = 0;
+        for (int i = 0; i < 8;i++)
+        {
+            mainStatusCtr.sc_sem[i] = -1;
+        }
     }
 }

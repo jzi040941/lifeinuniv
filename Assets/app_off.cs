@@ -23,7 +23,9 @@ public class app_off : MonoBehaviour {
             sw.Write(mainStatusCtr.Week.ToString()+" ");
             sw.Write(mainStatusCtr.Semester.ToString()+" ");
             sw.Write(mainStatusCtr.Act.ToString()+" ");
-            sw.Write(mainStatusCtr.Year.ToString());
+            sw.Write(mainStatusCtr.Year.ToString()+" ");
+            sw.Write(mainStatusCtr.ClassRate.ToString()+" ");
+            sw.Write(mainStatusCtr.LibRate.ToString());
             sw.Close();
             Application.Quit();
         }

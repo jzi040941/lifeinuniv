@@ -70,8 +70,7 @@ public class Closing_pannel : MonoBehaviour
 
 		this.chanagestatus (gameObject.name);
 
-        //end_check.ending_check(mainStatusCtr,library_flag,drunken_flag);
-		end_check.ending_check();
+		end_check.ending_check(mainStatusCtr,library_flag,drunken_flag);
         drunken_flag = false; library_flag = false;
 
         foreach (GameObject a in inactive){
@@ -92,8 +91,12 @@ public class Closing_pannel : MonoBehaviour
         //방학�? ?�널 ?�게 ()?�에 조건
         if ( ( (mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1) ) && mainStatusCtr.Act == 3)
         {
-            Invoke("vaca_open", 3.2f);
-            Invoke("vaca_close", 6.2f);
+            if (end_check.ending_fail_check(mainStatusCtr) == false) {
+                Invoke("vaca_open", 3.2f);
+                Invoke("vaca_close", 6.2f);
+                mainStatusCtr.ClassRate = 0;
+                mainStatusCtr.LibRate = 0;
+            }
             //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
         }
     }
@@ -103,6 +106,7 @@ public class Closing_pannel : MonoBehaviour
 		{
 			mainStatusCtr.Health -= Random.Range(5,15);
 			mainStatusCtr.Job = mainStatusCtr.Job + Random.Range(5,15);
+            mainStatusCtr.ClassRate++;
 		}
 
 		if (name == "Study_Panel")
@@ -112,6 +116,7 @@ public class Closing_pannel : MonoBehaviour
 			mainStatusCtr.Attr += Random.Range (3, 8);
 			mainStatusCtr.Money -= Random.Range (30, 101);
             library_flag = true;
+            mainStatusCtr.LibRate++;
 		}
 
 		if (name == "Drinking_Panel")

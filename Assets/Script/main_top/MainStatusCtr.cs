@@ -13,7 +13,9 @@ public class MainStatusCtr : MonoBehaviour{
 	private int sem;
 	private bool isTest;
 	private int year = 1;
-    float[] sc_sem = new float[8];
+    private int class_rate = 0;
+    private int lib_rate = 0;
+    public float[] sc_sem = new float[8] { -1,-1,-1,-1,-1,-1,-1,-1};
 	public int Health{
 		get{ return health; }
 		set{ health = value; }
@@ -81,7 +83,14 @@ public class MainStatusCtr : MonoBehaviour{
 		get{ return year; }
 		set{ year = value; }
 	}
-	StreamReader sc = null;
+    public int ClassRate{
+        get { return class_rate; }
+        set { class_rate = value; }
+    }
+    public int LibRate{
+        get { return lib_rate; }
+        set { lib_rate = value; }
+    }
 	private string str_init;
 	private string[] val;
 
@@ -105,6 +114,8 @@ public class MainStatusCtr : MonoBehaviour{
 				case 5: Semester = val_in; break;
 				case 6: Act = val_in; break;
 				case 7: Year = val_in; break;
+                case 8: ClassRate = val_in; break;
+                case 9: LibRate = val_in; break;
 				}
 			}
 			sc.Close();
