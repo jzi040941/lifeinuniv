@@ -6,13 +6,12 @@ public class Closing_pannel : MonoBehaviour
     MainStatusCtr mainStatusCtr;
     EndingCtr end_check;
     GameObject ui_instance;
-	Image myImageComponent;
+    Image myImageComponent;
 	Sprite first;
 	public Sprite second;
     bool library_flag = false;
     bool drunken_flag = false;
 
-    public GameObject[] inactive;
     void Start()
     {
 		inactive = GameObject.FindGameObjectsWithTag ("uninteratible");
@@ -24,13 +23,39 @@ public class Closing_pannel : MonoBehaviour
         end_check = ui_instance.GetComponent<EndingCtr>();
     }
 
-	void changetosecond(){
-		myImageComponent.sprite = second;
-	}
     public void invokereset()
     {
-		Invoke ("changetosecond", 1.5f);
+        Invoke("changetosecond", 0.5f);
+        Invoke("changetofirst", 1.0f);
+        Invoke("changetosecond", 1.5f);
+        Invoke("changetofirst", 2.0f);
+        Invoke("changetosecond", 2.5f);
+
         Invoke("Closing", 3);
+    }
+
+    void exam_open()
+    {
+        //GameObject.Find("examp_panel").SetActive(false);\
+        GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(true);
+    }
+
+    void exam_close()
+    {
+        //GameObject.Find("examp_panel").SetActive(false);\
+        GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(false);
+    }
+
+    void vaca_open()
+    {
+        //GameObject.Find("examp_panel").SetActive(false);\
+        GameObject.Find("UI").transform.FindChild("vaca_panel").gameObject.SetActive(true);
+    }
+
+    void vaca_close()
+    {
+        //GameObject.Find("examp_panel").SetActive(false);\
+        GameObject.Find("UI").transform.FindChild("vaca_panel").gameObject.SetActive(false);
     }
 
     void Closing()
@@ -53,6 +78,22 @@ public class Closing_pannel : MonoBehaviour
 		}
 		gameObject.SetActive(false);
 		myImageComponent.sprite = first;
+
+        //?úÌóòÏ§? ?®ÎÑê ?®Í≤å ()?àÏóê Ï°∞Í±¥
+        if ( ((mainStatusCtr.Week  == 5) || ((mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1))) && mainStatusCtr.Act == 3)
+        {
+            Invoke("exam_open", 0.1f);
+            Invoke("exam_close", 3.1f);
+            //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
+        }
+
+        //Î∞©ÌïôÏ§? ?®ÎÑê ?®Í≤å ()?àÏóê Ï°∞Í±¥
+        if ( ( (mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1) ) && mainStatusCtr.Act == 3)
+        {
+            Invoke("vaca_open", 3.2f);
+            Invoke("vaca_close", 6.2f);
+            //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
+        }
     }
 
 	void chanagestatus(string name){
