@@ -33,9 +33,9 @@ public class StatusBarCtr : MonoBehaviour {
         mainHealthBar.minValue = 0;
         mainHealthBar.maxValue = 100;
         mainJobBar.minValue = 0;
-        mainJobBar.maxValue = 100;
+        mainJobBar.maxValue = mainStatusCtr.Max_job;
         mainAttrBar.minValue = 0;
-        mainAttrBar.maxValue = 100;
+        mainAttrBar.maxValue = mainStatusCtr.Max_attr;
         h_text_ins = GameObject.Find("HealthText");
         h_text = h_text_ins.GetComponent<Text>();
         j_text_ins = GameObject.Find("JobText");

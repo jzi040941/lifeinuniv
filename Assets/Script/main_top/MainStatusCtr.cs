@@ -17,18 +17,27 @@ public class MainStatusCtr : MonoBehaviour{
 	private int year = 1;
     private int class_rate = 0;
     private int lib_rate = 0;
+	private int max_job = 800;
+	private int max_attr = 800;
     public float[] sc_sem = new float[8] { -1,-1,-1,-1,-1,-1,-1,-1};
+
+	public int Max_job {
+		get{ return max_job; }
+	}
+	public int Max_attr {
+		get{ return max_attr; }
+	}
 	public int Health{
 		get{ return health; }
 		set{ health = value; if (health > 100) health = 100; }
 	} 
 	public int Job{
 		get{ return job; }
-		set{ job = value; if (job > 100) job = 100; }
+		set{ job = value; if (job > max_job) job = max_job; }
 	}
 	public int Attr{
 		get{ return attr;}
-		set{ attr = value; if (Attr > 100) Attr = 100; }
+		set{ attr = value; if (attr > max_attr) attr = max_attr; }
 	}
 	public int Money{
 		get{

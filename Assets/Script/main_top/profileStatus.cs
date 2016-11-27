@@ -35,9 +35,9 @@ public class profileStatus : MonoBehaviour {
         profileHealthBar.minValue = 0;
         profileHealthBar.maxValue = 100;
         profileJobBar.minValue = 0;
-        profileJobBar.maxValue = 100;
+        profileJobBar.maxValue = mainStatusCtr.Max_job;
         profileAttrBar.minValue = 0;
-        profileAttrBar.maxValue = 100;
+        profileAttrBar.maxValue = mainStatusCtr.Max_attr;
     }
 	
 	// Update is called once per frame
