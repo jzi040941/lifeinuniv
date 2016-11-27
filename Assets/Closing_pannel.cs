@@ -61,7 +61,7 @@ public class Closing_pannel : MonoBehaviour
     //    GameObject.Find("UI").transform.FindChild("vaca_panel").gameObject.SetActive(false);
     //}
 
-    void Closing()
+    public void Closing()
     {
         
         GameObject.Find("activity_Panel").SetActive(false);
