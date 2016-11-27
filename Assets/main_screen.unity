@@ -6046,7 +6046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6552db5937a9c42958b13ffe02095b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  h_zero_ins: {fileID: 0}
+  h_zero_ins: {fileID: 397901674}
   stone_ins: {fileID: 509145095}
   fail_ins: {fileID: 1963835956}
   drunken_ins: {fileID: 1104987924}

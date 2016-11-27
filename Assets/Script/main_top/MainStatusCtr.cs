@@ -4,6 +4,8 @@ using System.Collections;
 using System.IO;
 
 public class MainStatusCtr : MonoBehaviour{
+    GameObject obj;
+    EndingCtr end_check;
 	private int health= 0;
 	private int job;
 	private int attr;
@@ -59,6 +61,7 @@ public class MainStatusCtr : MonoBehaviour{
             }
 			if (week == 8) {
 				week = 1;
+                end_check.ending_fail_check(this);
 				Semester += 1;
 			}
 		}
@@ -94,6 +97,8 @@ public class MainStatusCtr : MonoBehaviour{
 	void Start(){
 		int val_in;
         float sc_in;
+        obj = GameObject.Find("UI");
+        end_check = obj.GetComponent<EndingCtr>();
 		try
 		{
             //StreamReader sc = new StreamReader("last_status.txt");
