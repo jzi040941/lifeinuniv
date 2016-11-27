@@ -25,6 +25,7 @@ public class EndingCtr : MonoBehaviour {
 	public void ending_check(MainStatusCtr mainStatusCtr,string name) {
 		bool library = false;
 		bool drunken = false;
+		bool didclass = name == "Class_Panel";
         if (name == "Drinking_Panel")
         {
             drunken = true;
@@ -33,24 +34,29 @@ public class EndingCtr : MonoBehaviour {
         {
             library = true;
         }
-        if (mainStatusCtr.Health <= 0)
-        {
-            h_zero_ins.SetActive(!h_zero_ins.activeSelf);
-        } // 과로?? ?�딩
-        else if (mainStatusCtr.Health <= 40)
-        {
-            int rand = (int)Random.Range(0.0f, 100.0f);
-            if (rand < 40) {
-                if (library == true)
-                {
-                    stone_ins.SetActive(!stone_ins.activeSelf);
-                } // ?�석
-                if (drunken == true)
-                {
-                    drunken_ins.SetActive(!drunken_ins.activeSelf);
-                } // ?�역??
-            }
-        }
+		if (mainStatusCtr.Health <= 0) {
+			h_zero_ins.SetActive (!h_zero_ins.activeSelf);
+		} // 과로?? ?�딩
+        else if (mainStatusCtr.Health <= 40) {
+			int rand = (int)Random.Range (0.0f, 100.0f);
+			if (rand < 40) {
+				if (library == true) {
+					stone_ins.SetActive (!stone_ins.activeSelf);
+				} // ?�석
+				if (drunken == true) {
+					drunken_ins.SetActive (!drunken_ins.activeSelf);
+				} // ?�역??
+			}
+		} 
+		else {
+			int rand = (int)Random.Range (0, 100);
+			if (library&&rand < mainStatusCtr.LibRate * 3 - (3 * 6)) {
+				stone_ins.SetActive (!stone_ins.activeSelf);
+			}
+			else if (didclass&&rand < mainStatusCtr.ClassRate * 3 - (3*6)){
+				stone_ins.SetActive (!stone_ins.activeSelf);
+			}
+		}
     }
 
     public bool ending_fail_check(MainStatusCtr mainStatusCtr)
