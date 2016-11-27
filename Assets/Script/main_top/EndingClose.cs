@@ -35,5 +35,9 @@ public class EndingClose : MonoBehaviour {
         mainStatusCtr.Year = 1;
         mainStatusCtr.ClassRate = 0;
         mainStatusCtr.LibRate = 0;
+        for (int i = 0; i < 8; i++)
+        {
+            mainStatusCtr.sc_sem[i] = -1;
+        }
     }
 }

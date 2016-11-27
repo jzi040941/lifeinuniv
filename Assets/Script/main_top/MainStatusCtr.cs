@@ -93,9 +93,10 @@ public class MainStatusCtr : MonoBehaviour{
 
 	void Start(){
 		int val_in;
-
+        float sc_in;
 		try
 		{
+            //StreamReader sc = new StreamReader("last_status.txt");
 			System.IO.StreamReader sc = System.IO.File.OpenText(Application.persistentDataPath + "/last_status.txt");
 			str_init = sc.ReadLine();
 			val = str_init.Split(' ');
@@ -115,6 +116,13 @@ public class MainStatusCtr : MonoBehaviour{
                 case 9: LibRate = val_in; break;
 				}
 			}
+            str_init = sc.ReadLine();
+            val = str_init.Split(' ');
+            for (int i=0;i<8;i++)
+            {
+                sc_in = float.Parse(val[i]);
+                sc_sem[i] = sc_in;
+            }
 			sc.Close();
 		}
 		catch (System.IO.FileNotFoundException)

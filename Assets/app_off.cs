@@ -15,6 +15,7 @@ public class app_off : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKey("escape")){
+            int i;
 			sw = new StreamWriter(Application.persistentDataPath + "/last_status.txt", false);
             sw.Write(mainStatusCtr.Health.ToString()+" ");
             sw.Write(mainStatusCtr.Job.ToString()+" ");
@@ -26,6 +27,12 @@ public class app_off : MonoBehaviour {
             sw.Write(mainStatusCtr.Year.ToString()+" ");
             sw.Write(mainStatusCtr.ClassRate.ToString()+" ");
             sw.Write(mainStatusCtr.LibRate.ToString());
+            sw.Write("\n");
+            for (i=0;i<7;i++)
+            {
+                sw.Write(mainStatusCtr.sc_sem[i].ToString()+" ");
+            }
+            sw.Write(mainStatusCtr.sc_sem[i].ToString());
             sw.Close();
             Application.Quit();
         }

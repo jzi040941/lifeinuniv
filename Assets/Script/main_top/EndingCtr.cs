@@ -25,6 +25,14 @@ public class EndingCtr : MonoBehaviour {
 	public void ending_check(MainStatusCtr mainStatusCtr,string name) {
 		bool library = false;
 		bool drunken = false;
+        if (name == "Drinking_Panel")
+        {
+            drunken = true;
+        }
+        if (name == "Study_Panel")
+        {
+            library = true;
+        }
         if (mainStatusCtr.Health == 0)
         {
             h_zero_ins.SetActive(!h_zero_ins.activeSelf);
