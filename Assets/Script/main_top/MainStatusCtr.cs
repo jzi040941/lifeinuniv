@@ -41,14 +41,7 @@ public class MainStatusCtr : MonoBehaviour{
 			if (act == 0) {
 				act = 3;
 				Week += 1;
-                if (week == 4 )
-                {
-                    week += 1;
-                }
-                else if (week == 8)
-                {
-                    week = 1;
-                }
+				health += 30;
 			}
 		}
 	}
@@ -58,8 +51,12 @@ public class MainStatusCtr : MonoBehaviour{
 		}
 		set{
 			week = value;
+            if (week == 4)
+            {
+                week = 5;
+            }
 			if (week == 8) {
-//				week = 1;
+				week = 1;
 				Semester += 1;
 			}
 		}
