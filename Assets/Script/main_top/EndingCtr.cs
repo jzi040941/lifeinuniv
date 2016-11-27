@@ -37,10 +37,10 @@ public class EndingCtr : MonoBehaviour {
         {
             h_zero_ins.SetActive(!h_zero_ins.activeSelf);
         } // 과로?? ?�딩
-        else if (mainStatusCtr.Health <= 20)
+        else if (mainStatusCtr.Health <= 40)
         {
             int rand = (int)Random.Range(0.0f, 100.0f);
-            if (rand < 10) {
+            if (rand < 40) {
                 if (library == true)
                 {
                     stone_ins.SetActive(!stone_ins.activeSelf);
