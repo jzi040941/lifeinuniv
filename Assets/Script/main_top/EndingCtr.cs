@@ -54,7 +54,7 @@ public class EndingCtr : MonoBehaviour {
         }
     }
 
-    void restart_Init(){
+    public void restart_Init(MainStatusCtr mainStatusCtr){
         mainStatusCtr.Health = 100;
         mainStatusCtr.Job = 50;
         mainStatusCtr.Attr = 50;
@@ -62,5 +62,16 @@ public class EndingCtr : MonoBehaviour {
         mainStatusCtr.Semester = 1;
         mainStatusCtr.Act = 3;
         mainStatusCtr.Year = 1;
+		mainStatusCtr.Money = 0;
     }
+
+	public void restart_Init(){
+		mainStatusCtr.Health = 100;
+		mainStatusCtr.Job = 50;
+		mainStatusCtr.Attr = 50;
+		mainStatusCtr.Week = 1;
+		mainStatusCtr.Semester = 1;
+		mainStatusCtr.Act = 3;
+		mainStatusCtr.Year = 1;
+	}
 }

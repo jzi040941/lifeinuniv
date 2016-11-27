@@ -111,7 +111,8 @@ public class MainStatusCtr : MonoBehaviour{
 		}
 		catch (System.IO.FileNotFoundException)
 		{
-			Debug.Log ("filedoesnotexisit");
+			EndingCtr temp = GameObject.Find ("UI").GetComponent<EndingCtr> ();
+			temp.restart_Init (this);
 		}
 		//sc = new StreamReader("last_status.txt");
 		//sc = new StreamReader(Application.persistentDataPath + "/last_status.txt");

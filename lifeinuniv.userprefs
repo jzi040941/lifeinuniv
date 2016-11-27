@@ -6,9 +6,10 @@
       <File FileName="Assets\Script\main_top\popup_panels.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\main_top\changeText.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\main_top\MainStatusCtr.cs" Line="1" Column="1" />
-      <File FileName="Assets\Closing_pannel.cs" Line="81" Column="35" />
+      <File FileName="Assets\Closing_pannel.cs" Line="6" Column="33" />
       <File FileName="Assets\app_off.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\main_top\EndingCtr.cs" Line="8" Column="65" />
+      <File FileName="Assets\Script\main_top\EndingCtr.cs" Line="1" Column="1" />
+      <File FileName="Assets\change_panel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
