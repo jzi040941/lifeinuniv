@@ -22,11 +22,13 @@ public class EndingCtr : MonoBehaviour {
        
     }
 
-    public void ending_check(MainStatusCtr mainStatusCtr,bool library,bool drunken) {
+	public void ending_check(MainStatusCtr mainStatusCtr,string name) {
+		bool library = false;
+		bool drunken = false;
         if (mainStatusCtr.Health == 0)
         {
             h_zero_ins.SetActive(!h_zero_ins.activeSelf);
-        } // 과로?? ?�딩
+        } // 과로?? ?�딩
         else if (mainStatusCtr.Health <= 20)
         {
             int rand = (int)Random.Range(0.0f, 100.0f);
@@ -34,11 +36,11 @@ public class EndingCtr : MonoBehaviour {
                 if (library == true)
                 {
                     stone_ins.SetActive(!stone_ins.activeSelf);
-                } // ?�석
+                } // ?�석
                 if (drunken == true)
                 {
                     drunken_ins.SetActive(!drunken_ins.activeSelf);
-                } // ?�역??
+                } // ?�역??
             }
         }
     }
