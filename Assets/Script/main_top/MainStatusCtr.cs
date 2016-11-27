@@ -66,9 +66,9 @@ public class MainStatusCtr : MonoBehaviour{
 	public int Semester{        
 		get{ return sem; }
 		set{ sem = value;
-			if (sem == 5) {
+			if (sem == 9) {
 				sem = 1;
-				Year += 1;
+				//Year += 1;
 			}
 		}
 	}
