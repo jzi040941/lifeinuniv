@@ -33,13 +33,13 @@ public class Closing_pannel : MonoBehaviour
 
         GameObject.Find("activity_Panel").SetActive(false);
 
-        mainStatusCtr.Act = mainStatusCtr.Act - 1;
-
 
 		this.chanagestatus (gameObject.name);
 
 		end_check.ending_check(mainStatusCtr,gameObject.name);
         //drunken_flag = false; library_flag = false;
+
+        mainStatusCtr.Act = mainStatusCtr.Act - 1;
 
         foreach (GameObject a in inactive){
 			Button btn = a.GetComponent<Button> ();

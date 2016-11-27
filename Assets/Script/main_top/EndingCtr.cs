@@ -33,7 +33,7 @@ public class EndingCtr : MonoBehaviour {
         {
             library = true;
         }
-        if (mainStatusCtr.Health == 0)
+        if (mainStatusCtr.Health <= 0)
         {
             h_zero_ins.SetActive(!h_zero_ins.activeSelf);
         } // 과로?? ?�딩
