@@ -6,11 +6,13 @@ public class EndingClose : MonoBehaviour {
     public GameObject obj;
     GameObject ui_instance;
     MainStatusCtr mainStatusCtr;
+    GradeCtr gr_check;
 
 	// Use this for initialization
 	void Start () {
         ui_instance = GameObject.Find("UI");
         mainStatusCtr = ui_instance.GetComponent<MainStatusCtr>();
+        gr_check = ui_instance.GetComponent<GradeCtr>();
     }
 	
 	// Update is called once per frame

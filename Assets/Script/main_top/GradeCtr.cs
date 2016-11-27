@@ -7,7 +7,7 @@ public class GradeCtr : MonoBehaviour {
     GameObject ui_instance;
     public Text[] grade;
     public Text cgpa;
-    float cgpa_sc;
+    public float cgpa_sc;
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +38,11 @@ public class GradeCtr : MonoBehaviour {
         }
         if (cgpa_sc == 0)
         {
+            cgpa.text = "N/A";
+        }
+        else if (mainStatusCtr.sc_sem[0] == -1 && mainStatusCtr.sc_sem[7] == -1)
+        {
+            cgpa_sc = 0;
             cgpa.text = "N/A";
         }
         else
