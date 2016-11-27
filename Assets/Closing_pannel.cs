@@ -11,6 +11,7 @@ public class Closing_pannel : MonoBehaviour
 	public Sprite second;
     bool library_flag = false;
     bool drunken_flag = false;
+	public GameObject[] inactive;
 
     void Start()
     {
@@ -69,7 +70,8 @@ public class Closing_pannel : MonoBehaviour
 
 		this.chanagestatus (gameObject.name);
 
-        end_check.Ending_Check(mainStatusCtr,library_flag,drunken_flag);
+        //end_check.ending_check(mainStatusCtr,library_flag,drunken_flag);
+		end_check.ending_check();
         drunken_flag = false; library_flag = false;
 
         foreach (GameObject a in inactive){
@@ -79,7 +81,7 @@ public class Closing_pannel : MonoBehaviour
 		gameObject.SetActive(false);
 		myImageComponent.sprite = first;
 
-        //?�험�? ?�널 ?�게 ()?�에 조건
+        //?�험�? ?�널 ?�게 ()?�에 조건
         if ( ((mainStatusCtr.Week  == 5) || ((mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1))) && mainStatusCtr.Act == 3)
         {
             Invoke("exam_open", 0.1f);
@@ -87,7 +89,7 @@ public class Closing_pannel : MonoBehaviour
             //GameObject.Find("UI").transform.FindChild("exam_panel").gameObject.SetActive(mainStatusCtr.Week==2);
         }
 
-        //방학�? ?�널 ?�게 ()?�에 조건
+        //방학�? ?�널 ?�게 ()?�에 조건
         if ( ( (mainStatusCtr.Week == 1) && (mainStatusCtr.Semester != 1) ) && mainStatusCtr.Act == 3)
         {
             Invoke("vaca_open", 3.2f);
